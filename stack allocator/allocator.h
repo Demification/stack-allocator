@@ -4,7 +4,7 @@
 
 namespace alc
 {
-	inline static void PAUSE();
+	__forceinline static void PAUSE();
 
 	class allocator
 	{
@@ -14,7 +14,7 @@ namespace alc
 		static unsigned long __stdcall thread_func(void* lpParameter);
 
 	public:
-		UINT sizebytes;
+		size_t sizebytes;
 
 		struct parameters
 		{
